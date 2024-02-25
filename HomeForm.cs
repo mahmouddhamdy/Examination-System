@@ -20,6 +20,7 @@ namespace OnlineExamination
         Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
         ExaminationSystemDBContext context = new ExaminationSystemDBContext();
         string Email_student;
+        ExamForm examForm = new();
         public HomeForm()
         {
             InitializeComponent();
@@ -35,48 +36,64 @@ namespace OnlineExamination
 
 
             this.Text = Email_student;
-            //Trace.WriteLine(config.AppSettings.Settings["StudentID"].Value);
        
-           /* foreach (var item in crs)
-            {
-
-                Trace.WriteLine(item.Course.CourseName);
-
-            }
-            */
 
 
 
 
         }
+
         private void LoadCourses()
         {
             var stud = context.Students.FirstOrDefault(s => s.Email == Email_student);
 
+            var res = context.StudentCourses.Include(s => s.Course).ThenInclude(c=>c.Ins).Where(s => s.StudentId == stud!.StudentId).ToList();
 
-            var res = context.StudentCourses.Include(s => s.Course).Where(s => s.StudentId == stud!.StudentId).ToList();
+         
+
+
+            //var ins = context.Courses.Include(i=>i.Ins).Select(i => i).ToList();
+
 
             CourseSection[] courseSection = new CourseSection[res.Count];
 
             for (int i = 0; i < res.Count; i++)
             {
+                
+
+                StringBuilder stringBuilder= new StringBuilder();
+                foreach (var instructor in res[i].Course.Ins)
+                {
+                    stringBuilder.Append(instructor.InstructorName);
+                    stringBuilder.Append(',');
+                    
+                }
+                string instructorNames = stringBuilder.ToString();
 
 
                 courseSection[i] = new CourseSection();
+
+             
+                 
                 if (res[i].StudentGrade != null)
                 {
                     courseSection[i].StartExamBtn.Visible = false;
-                    courseSection[i].Gradevalue.Text = res[i].StudentGrade.ToString();  
+                    courseSection[i].Gradevalue.Text = res[i].StudentGrade.ToString();
+                    
                 }
                 else
                 {
                     courseSection[i].Gradelabel.Visible = false;
                     courseSection[i].Gradevalue.Visible = false;
                     courseSection[i].AnswerExamBtn.Visible = false;
-
+                    courseSection[i].StartExamBtn.Click += (s, e) =>
+                    {
+                        this.Hide();
+                        examForm.Show();
+                    };
                 }
 
-                courseSection[i].InsName = "hasssan";
+                courseSection[i].InsName = instructorNames;
                 courseSection[i].CrsName = res[i].Course.CourseName;
 
                 this.flowLayoutPanel1.Controls.Add(courseSection[i]);
@@ -87,7 +104,7 @@ namespace OnlineExamination
 
 
         }
-
+      
         private void HomeForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();

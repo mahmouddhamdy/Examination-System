@@ -86,6 +86,7 @@
             btnExam.TabIndex = 3;
             btnExam.Text = "Start Exam";
             btnExam.UseVisualStyleBackColor = false;
+         
             // 
             // pictureBox1
             // 

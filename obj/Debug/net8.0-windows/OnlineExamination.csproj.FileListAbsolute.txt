@@ -67,3 +67,5 @@ F:\ITI\Courses\Adv SQL\Project (Online Exam)\WInForm APP\OnlineExamination\bin\D
 F:\ITI\Courses\Adv SQL\Project (Online Exam)\WInForm APP\OnlineExamination\obj\Debug\net8.0-windows\OnlineExamination.HomeForm.resources
 F:\ITI\Courses\Adv SQL\Project (Online Exam)\WInForm APP\OnlineExamination\obj\Debug\net8.0-windows\OnlineExamination.LoginForm.resources
 F:\ITI\Courses\Adv SQL\Project (Online Exam)\WInForm APP\OnlineExamination\bin\Debug\net8.0-windows\OnlineExamination.dll.config
+F:\ITI\Courses\Adv SQL\Project (Online Exam)\WInForm APP\OnlineExamination\obj\Debug\net8.0-windows\OnlineExamination.ExamForm.resources
+F:\ITI\Courses\Adv SQL\Project (Online Exam)\WInForm APP\OnlineExamination\obj\Debug\net8.0-windows\OnlineExamination.sourcelink.json
