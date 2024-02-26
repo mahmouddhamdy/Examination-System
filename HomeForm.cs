@@ -20,7 +20,7 @@ namespace OnlineExamination
         Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
         ExaminationSystemDBContext context = new ExaminationSystemDBContext();
         string Email_student;
-        ExamForm examForm = new();
+        ExamInfoForm examInfo = new();
         public HomeForm()
         {
             InitializeComponent();
@@ -49,8 +49,6 @@ namespace OnlineExamination
 
             var res = context.StudentCourses.Include(s => s.Course).ThenInclude(c=>c.Ins).Where(s => s.StudentId == stud!.StudentId).ToList();
 
-         
-
 
             //var ins = context.Courses.Include(i=>i.Ins).Select(i => i).ToList();
 
@@ -59,7 +57,8 @@ namespace OnlineExamination
 
             for (int i = 0; i < res.Count; i++)
             {
-                
+
+                string crsName ="";
 
                 StringBuilder stringBuilder= new StringBuilder();
                 foreach (var instructor in res[i].Course.Ins)
@@ -73,8 +72,10 @@ namespace OnlineExamination
 
                 courseSection[i] = new CourseSection();
 
-             
-                 
+                courseSection[i].InsName = instructorNames;
+                courseSection[i].CrsName = res[i].Course.CourseName;
+                crsName = res[i].Course.CourseName;
+
                 if (res[i].StudentGrade != null)
                 {
                     courseSection[i].StartExamBtn.Visible = false;
@@ -86,15 +87,20 @@ namespace OnlineExamination
                     courseSection[i].Gradelabel.Visible = false;
                     courseSection[i].Gradevalue.Visible = false;
                     courseSection[i].AnswerExamBtn.Visible = false;
+
+                    
                     courseSection[i].StartExamBtn.Click += (s, e) =>
                     {
                         this.Hide();
-                        examForm.Show();
+                        ExamInfoForm.crsName = crsName;
+                        examInfo.Show();
+                        
+                        
                     };
+
                 }
 
-                courseSection[i].InsName = instructorNames;
-                courseSection[i].CrsName = res[i].Course.CourseName;
+            
 
                 this.flowLayoutPanel1.Controls.Add(courseSection[i]);
 

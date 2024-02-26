@@ -62,6 +62,7 @@
             ptnPrev.TabIndex = 1;
             ptnPrev.Text = "prev";
             ptnPrev.UseVisualStyleBackColor = true;
+            ptnPrev.Click += ptnPrev_Click;
             // 
             // btnNext
             // 
@@ -71,6 +72,7 @@
             btnNext.TabIndex = 2;
             btnNext.Text = "next";
             btnNext.UseVisualStyleBackColor = true;
+            btnNext.Click += btnNext_Click;
             // 
             // panelTF
             // 
@@ -109,7 +111,7 @@
             panelMCQ.Controls.Add(radioMCQ3);
             panelMCQ.Controls.Add(radioMCQ2);
             panelMCQ.Controls.Add(radioMCQ1);
-            panelMCQ.Location = new Point(348, 184);
+            panelMCQ.Location = new Point(40, 184);
             panelMCQ.Name = "panelMCQ";
             panelMCQ.Size = new Size(240, 120);
             panelMCQ.TabIndex = 0;
@@ -172,6 +174,7 @@
             Name = "ExamForm";
             Text = "ExamForm";
             FormClosing += ExamForm_FormClosing;
+            Load += ExamForm_Load;
             panelTF.ResumeLayout(false);
             panelTF.PerformLayout();
             panelMCQ.ResumeLayout(false);
