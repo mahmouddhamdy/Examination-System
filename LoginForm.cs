@@ -13,6 +13,8 @@ namespace OnlineExamination
     {
         public LoginForm()
         {
+
+
             InitializeComponent();
             this.FormClosing += (sender, e) => { this.context.Dispose(); };
         }
