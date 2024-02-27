@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mahmoud\\Documents\\GitHub\\SQL-Project\\OnlineExamination.csproj": {}
+    "F:\\ITI\\Courses\\Adv SQL\\Project (Online Exam)\\WInForm APP\\OnlineExamination\\OnlineExamination.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mahmoud\\Documents\\GitHub\\SQL-Project\\OnlineExamination.csproj": {
+    "F:\\ITI\\Courses\\Adv SQL\\Project (Online Exam)\\WInForm APP\\OnlineExamination\\OnlineExamination.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mahmoud\\Documents\\GitHub\\SQL-Project\\OnlineExamination.csproj",
+        "projectUniqueName": "F:\\ITI\\Courses\\Adv SQL\\Project (Online Exam)\\WInForm APP\\OnlineExamination\\OnlineExamination.csproj",
         "projectName": "OnlineExamination",
-        "projectPath": "C:\\Users\\Mahmoud\\Documents\\GitHub\\SQL-Project\\OnlineExamination.csproj",
-        "packagesPath": "C:\\Users\\Mahmoud\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mahmoud\\Documents\\GitHub\\SQL-Project\\obj\\",
+        "projectPath": "F:\\ITI\\Courses\\Adv SQL\\Project (Online Exam)\\WInForm APP\\OnlineExamination\\OnlineExamination.csproj",
+        "packagesPath": "C:\\Users\\hassan\\.nuget\\packages\\",
+        "outputPath": "F:\\ITI\\Courses\\Adv SQL\\Project (Online Exam)\\WInForm APP\\OnlineExamination\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\New folder\\Components\\Offline Packages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Mahmoud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hassan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.2.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\New folder\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

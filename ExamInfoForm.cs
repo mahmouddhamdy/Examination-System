@@ -17,7 +17,7 @@ namespace OnlineExamination
     public partial class ExamInfoForm : Form
     {
         public static string crsName;
-        ExamForm examform = new();
+      
         public ExamInfoForm()
         {
             InitializeComponent();
@@ -61,6 +61,7 @@ namespace OnlineExamination
 
         private void StartExambtn_Click(object sender, EventArgs e)
         {
+            ExamForm examform = new();
             if (r != 0)
             {
                 this.Hide();

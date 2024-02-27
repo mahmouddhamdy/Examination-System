@@ -144,3 +144,4 @@ C:\Users\Mahmoud\Documents\GitHub\SQL-Project\obj\Debug\net8.0-windows\refint\On
 C:\Users\Mahmoud\Documents\GitHub\SQL-Project\obj\Debug\net8.0-windows\OnlineExamination.pdb
 C:\Users\Mahmoud\Documents\GitHub\SQL-Project\obj\Debug\net8.0-windows\OnlineExamination.genruntimeconfig.cache
 C:\Users\Mahmoud\Documents\GitHub\SQL-Project\obj\Debug\net8.0-windows\ref\OnlineExamination.dll
+F:\ITI\Courses\Adv SQL\Project (Online Exam)\WInForm APP\OnlineExamination\obj\Debug\net8.0-windows\OnlineExamination.FinalMarkForm.resources

@@ -20,18 +20,22 @@ namespace OnlineExamination
         Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
         ExaminationSystemDBContext context = new ExaminationSystemDBContext();
         string Email_student;
-        ExamInfoForm examInfo = new();
+       
+    //    FinalMarkForm finalMarkForm = new FinalMarkForm();
         public HomeForm()
         {
             InitializeComponent();
             //  this.loginFrm = frm;
             this.FormClosing += (sender, e) => { this.context.Dispose(); };
-            Email_student = config.AppSettings.Settings["StudentMail"].Value;
+            var testiid = config.AppSettings.Settings["StudentID"].Value;
+            Trace.WriteLine(testiid);
         }
 
         
         private void Form2_Load(object sender, EventArgs e)
         {
+
+            Email_student = config.AppSettings.Settings["StudentMail"].Value;
             LoadCourses();
 
 
@@ -45,6 +49,7 @@ namespace OnlineExamination
 
         private void LoadCourses()
         {
+            ExamInfoForm examInfo = new();
             var stud = context.Students.FirstOrDefault(s => s.Email == Email_student);
 
             var res = context.StudentCourses.Include(s => s.Course).ThenInclude(c=>c.Ins).Where(s => s.StudentId == stud!.StudentId).ToList();
@@ -80,6 +85,13 @@ namespace OnlineExamination
                 {
                     courseSection[i].StartExamBtn.Visible = false;
                     courseSection[i].Gradevalue.Text = res[i].StudentGrade.ToString();
+
+                   /* courseSection[i].AnswerExamBtn.Click += (sender, e) =>
+                    {
+                        this.Hide();
+                        
+                        finalMarkForm.Show();
+                    };*/
                     
                 }
                 else
@@ -113,7 +125,11 @@ namespace OnlineExamination
       
         private void HomeForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+          
+
             Application.Exit();
+
+
         }
     }
 }
