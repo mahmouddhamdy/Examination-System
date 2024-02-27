@@ -26,7 +26,7 @@ namespace OnlineExamination
             InitializeComponent();
             //  this.loginFrm = frm;
             this.FormClosing += (sender, e) => { this.context.Dispose(); };
-            Email_student = config.AppSettings.Settings["StudentID"].Value;
+            Email_student = config.AppSettings.Settings["StudentMail"].Value;
         }
 
         

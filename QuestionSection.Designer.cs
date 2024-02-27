@@ -30,90 +30,89 @@
         {
             labelQuestion = new Label();
             panel1 = new Panel();
-            radioMCQ1 = new RadioButton();
-            radioMCQ2 = new RadioButton();
-            radioMCQ3 = new RadioButton();
-            radioMCQ4 = new RadioButton();
+            RadioMCQ1 = new RadioButton();
+            RadioMCQ2 = new RadioButton();
+            RadioMCQ3 = new RadioButton();
+            RadioMCQ4 = new RadioButton();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // labelQuestion
             // 
-            labelQuestion.AutoSize = true;
             labelQuestion.Font = new Font("Corbel", 21.913044F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelQuestion.Location = new Point(36, 9);
+            labelQuestion.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Assertive;
+            labelQuestion.Location = new Point(30, 22);
             labelQuestion.Name = "labelQuestion";
-            labelQuestion.Size = new Size(109, 42);
+            labelQuestion.Size = new Size(836, 135);
             labelQuestion.TabIndex = 0;
-            labelQuestion.Text = "label1";
+            labelQuestion.Text = "label1\r\n";
             // 
             // panel1
             // 
-            panel1.Controls.Add(radioMCQ1);
-            panel1.Controls.Add(radioMCQ2);
-            panel1.Controls.Add(radioMCQ3);
-            panel1.Controls.Add(radioMCQ4);
-            panel1.Location = new Point(20, 65);
+            panel1.Controls.Add(RadioMCQ1);
+            panel1.Controls.Add(RadioMCQ2);
+            panel1.Controls.Add(RadioMCQ3);
+            panel1.Controls.Add(RadioMCQ4);
+            panel1.Location = new Point(30, 168);
             panel1.Name = "panel1";
-            panel1.Size = new Size(240, 120);
+            panel1.Size = new Size(240, 126);
             panel1.TabIndex = 1;
             // 
             // radioMCQ1
             // 
-            radioMCQ1.AutoSize = true;
-            radioMCQ1.Location = new Point(17, 3);
-            radioMCQ1.Name = "radioMCQ1";
-            radioMCQ1.Size = new Size(114, 24);
-            radioMCQ1.TabIndex = 2;
-            radioMCQ1.TabStop = true;
-            radioMCQ1.Text = "radioButton1";
-            radioMCQ1.UseVisualStyleBackColor = true;
+            RadioMCQ1.AutoSize = true;
+            RadioMCQ1.Location = new Point(17, 3);
+            RadioMCQ1.Name = "radioMCQ1";
+            RadioMCQ1.Size = new Size(117, 24);
+            RadioMCQ1.TabIndex = 2;
+            RadioMCQ1.TabStop = true;
+            RadioMCQ1.Text = "radioButton1";
+            RadioMCQ1.UseVisualStyleBackColor = true;
             // 
             // radioMCQ2
             // 
-            radioMCQ2.AutoSize = true;
-            radioMCQ2.Location = new Point(17, 33);
-            radioMCQ2.Name = "radioMCQ2";
-            radioMCQ2.Size = new Size(114, 24);
-            radioMCQ2.TabIndex = 3;
-            radioMCQ2.TabStop = true;
-            radioMCQ2.Text = "radioButton2";
-            radioMCQ2.UseVisualStyleBackColor = true;
+            RadioMCQ2.AutoSize = true;
+            RadioMCQ2.Location = new Point(17, 35);
+            RadioMCQ2.Name = "radioMCQ2";
+            RadioMCQ2.Size = new Size(117, 24);
+            RadioMCQ2.TabIndex = 3;
+            RadioMCQ2.TabStop = true;
+            RadioMCQ2.Text = "radioButton2";
+            RadioMCQ2.UseVisualStyleBackColor = true;
             // 
             // radioMCQ3
             // 
-            radioMCQ3.AutoSize = true;
-            radioMCQ3.Location = new Point(16, 63);
-            radioMCQ3.Name = "radioMCQ3";
-            radioMCQ3.Size = new Size(114, 24);
-            radioMCQ3.TabIndex = 4;
-            radioMCQ3.TabStop = true;
-            radioMCQ3.Text = "radioButton3";
-            radioMCQ3.UseVisualStyleBackColor = true;
+            RadioMCQ3.AutoSize = true;
+            RadioMCQ3.Location = new Point(16, 66);
+            RadioMCQ3.Name = "radioMCQ3";
+            RadioMCQ3.Size = new Size(117, 24);
+            RadioMCQ3.TabIndex = 4;
+            RadioMCQ3.TabStop = true;
+            RadioMCQ3.Text = "radioButton3";
+            RadioMCQ3.UseVisualStyleBackColor = true;
             // 
             // radioMCQ4
             // 
-            radioMCQ4.AutoSize = true;
-            radioMCQ4.Location = new Point(16, 93);
-            radioMCQ4.Name = "radioMCQ4";
-            radioMCQ4.Size = new Size(114, 24);
-            radioMCQ4.TabIndex = 5;
-            radioMCQ4.TabStop = true;
-            radioMCQ4.Text = "radioButton4";
-            radioMCQ4.UseVisualStyleBackColor = true;
+            RadioMCQ4.AutoSize = true;
+            RadioMCQ4.Location = new Point(16, 98);
+            RadioMCQ4.Name = "radioMCQ4";
+            RadioMCQ4.Size = new Size(117, 24);
+            RadioMCQ4.TabIndex = 5;
+            RadioMCQ4.TabStop = true;
+            RadioMCQ4.Text = "radioButton4";
+            RadioMCQ4.UseVisualStyleBackColor = true;
             // 
             // QuestionSection
             // 
-            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel1);
             Controls.Add(labelQuestion);
             Name = "QuestionSection";
-            Size = new Size(719, 222);
+            Size = new Size(869, 385);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -124,5 +123,10 @@
         private RadioButton radioMCQ2;
         private RadioButton radioMCQ3;
         private RadioButton radioMCQ4;
+
+        public RadioButton RadioMCQ1 { get => radioMCQ1; set => radioMCQ1 = value; }
+        public RadioButton RadioMCQ2 { get => radioMCQ2; set => radioMCQ2 = value; }
+        public RadioButton RadioMCQ3 { get => radioMCQ3; set => radioMCQ3 = value; }
+        public RadioButton RadioMCQ4 { get => radioMCQ4; set => radioMCQ4 = value; }
     }
 }

@@ -31,13 +31,14 @@
             ptnPrev = new Button();
             btnNext = new Button();
             panelQuestion = new Panel();
+            finishExamButton = new Button();
             SuspendLayout();
             // 
             // ptnPrev
             // 
-            ptnPrev.Location = new Point(40, 343);
+            ptnPrev.Location = new Point(382, 381);
             ptnPrev.Name = "ptnPrev";
-            ptnPrev.Size = new Size(90, 28);
+            ptnPrev.Size = new Size(90, 29);
             ptnPrev.TabIndex = 1;
             ptnPrev.Text = "prev";
             ptnPrev.UseVisualStyleBackColor = true;
@@ -45,9 +46,9 @@
             // 
             // btnNext
             // 
-            btnNext.Location = new Point(348, 343);
+            btnNext.Location = new Point(690, 381);
             btnNext.Name = "btnNext";
-            btnNext.Size = new Size(90, 28);
+            btnNext.Size = new Size(90, 29);
             btnNext.TabIndex = 2;
             btnNext.Text = "next";
             btnNext.UseVisualStyleBackColor = true;
@@ -55,17 +56,29 @@
             // 
             // panelQuestion
             // 
-            panelQuestion.Location = new Point(21, 26);
+            panelQuestion.Location = new Point(21, 27);
             panelQuestion.Name = "panelQuestion";
-            panelQuestion.Size = new Size(822, 289);
+            panelQuestion.Size = new Size(1455, 304);
             panelQuestion.TabIndex = 3;
+            // 
+            // finishExamButton
+            // 
+            finishExamButton.Location = new Point(962, 381);
+            finishExamButton.Name = "finishExamButton";
+            finishExamButton.Size = new Size(94, 29);
+            finishExamButton.TabIndex = 4;
+            finishExamButton.Text = "Finish Exam";
+            finishExamButton.UseVisualStyleBackColor = true;
+            finishExamButton.Visible = false;
+            finishExamButton.Click += finishExamButton_Click;
             // 
             // ExamForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SteelBlue;
-            ClientSize = new Size(998, 501);
+            ClientSize = new Size(1488, 439);
+            Controls.Add(finishExamButton);
             Controls.Add(panelQuestion);
             Controls.Add(btnNext);
             Controls.Add(ptnPrev);
@@ -80,5 +93,6 @@
         private Button ptnPrev;
         private Button btnNext;
         private Panel panelQuestion;
+        private Button finishExamButton;
     }
 }

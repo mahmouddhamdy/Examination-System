@@ -49,10 +49,10 @@ namespace OnlineExamination
                 if (TypeQuestion1 == "MCQ")
                 {
                  
-                    this.radioMCQ1.Text = ChoicesContent[0];
-                    this.radioMCQ2.Text = ChoicesContent[1];
-                    this.radioMCQ3.Text = ChoicesContent[2];
-                    this.radioMCQ4.Text = ChoicesContent[3];
+                    this.RadioMCQ1.Text = ChoicesContent[0];
+                    this.RadioMCQ2.Text = ChoicesContent[1];
+                    this.RadioMCQ3.Text = ChoicesContent[2];
+                    this.RadioMCQ4.Text = ChoicesContent[3];
 
                    /* this.radioMCQ1.Tag = ChoicesNum[0];
                     this.radioMCQ2.Tag = ChoicesNum[1];
@@ -69,10 +69,10 @@ namespace OnlineExamination
                 else
                 {
 
-                    this.radioMCQ1.Text = ChoicesContent[0];
-                    this.radioMCQ3.Text = ChoicesContent[1];
-                    this.radioMCQ2.Visible = false;
-                    this.radioMCQ4.Visible = false;
+                    this.RadioMCQ1.Text = ChoicesContent[0];
+                    this.RadioMCQ3.Text = ChoicesContent[1];
+                    this.RadioMCQ2.Visible = false;
+                    this.RadioMCQ4.Visible = false;
 
                   /*  this.radioMCQ1.Tag = ChoicesNum[0];
                     this.radioMCQ3.Tag = ChoicesNum[1];
@@ -91,17 +91,17 @@ namespace OnlineExamination
                 if (TypeQuestion1 == "MCQ")
                 {
 
-                     this.radioMCQ1.Tag = ChoicesNum[0];
-                     this.radioMCQ2.Tag = ChoicesNum[1];
-                     this.radioMCQ3.Tag = ChoicesNum[2];
-                     this.radioMCQ4.Tag = ChoicesNum[3];
+                     this.RadioMCQ1.Tag = ChoicesNum[0];
+                     this.RadioMCQ2.Tag = ChoicesNum[1];
+                     this.RadioMCQ3.Tag = ChoicesNum[2];
+                     this.RadioMCQ4.Tag = ChoicesNum[3];
 
 
                 }
                 else
                 {
-                      this.radioMCQ1.Tag = ChoicesNum[0];
-                      this.radioMCQ3.Tag = ChoicesNum[1];
+                      this.RadioMCQ1.Tag = ChoicesNum[0];
+                      this.RadioMCQ3.Tag = ChoicesNum[1];
 
 
                 }

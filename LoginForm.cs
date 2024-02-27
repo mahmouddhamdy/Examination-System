@@ -31,7 +31,8 @@ namespace OnlineExamination
                // Trace.WriteLine(config.AppSettings.Settings["StudentID"].Value);
                 config.Save(ConfigurationSaveMode.Modified);
                 ConfigurationManager.RefreshSection("appSettings"); this.Hide();
-                config.AppSettings.Settings["StudentID"].Value = res.Email;
+                config.AppSettings.Settings["StudentMail"].Value = res.Email;
+                config.AppSettings.Settings["StudentID"].Value = res.StudentId.ToString();
                 home.Show();
 
             }
