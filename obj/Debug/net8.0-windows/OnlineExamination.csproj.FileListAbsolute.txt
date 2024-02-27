@@ -70,3 +70,4 @@ F:\ITI\Courses\Adv SQL\Project (Online Exam)\WInForm APP\OnlineExamination\bin\D
 F:\ITI\Courses\Adv SQL\Project (Online Exam)\WInForm APP\OnlineExamination\obj\Debug\net8.0-windows\OnlineExamination.ExamForm.resources
 F:\ITI\Courses\Adv SQL\Project (Online Exam)\WInForm APP\OnlineExamination\obj\Debug\net8.0-windows\OnlineExamination.sourcelink.json
 F:\ITI\Courses\Adv SQL\Project (Online Exam)\WInForm APP\OnlineExamination\obj\Debug\net8.0-windows\OnlineExamination.ExamInfoForm.resources
+F:\ITI\Courses\Adv SQL\Project (Online Exam)\WInForm APP\OnlineExamination\obj\Debug\net8.0-windows\OnlineExamination.QuestionSection.resources

@@ -20,6 +20,10 @@ namespace OnlineExamination
     {
         public static int ExamID;
         QuestionInfo[] arr;
+        int indx = 0;
+        private List<int> Visited = new List<int>();
+
+        QuestionSection[] QuesSection = new QuestionSection[10]; 
 
         BindingSource bindSrc;
         public ExamForm()
@@ -43,21 +47,21 @@ namespace OnlineExamination
 
             LoadQuestions(res);
 
-            bindSrc = new(arr,"");
 
-            this.LabelQuestion.DataBindings.Add("Text", bindSrc, "QuestionBody");
 
-            if (arr[0].Question_Type1 == "MCQ")
-            {
-                panelMCQ.Visible = true;
-                panelTF.Visible = false;
 
-            }
-            else
-            {
-                panelMCQ.Visible = false;
-                panelTF.Visible = true;
-            }
+            QuesSection[indx] = new QuestionSection();
+            QuesSection[indx] = new QuestionSection(arr[indx].QuestionBody, arr[indx].ContectChoices1, arr[indx].Choices_Num, arr[indx].Question_Type1);
+            
+            /*QuesSection[indx].QuestionBody1 = arr[indx].QuestionBody;
+            QuesSection[indx].TypeQuestion1 = arr[indx].Question_Type1;
+            QuesSection[indx].ChoicesContent1 = arr[indx].ContectChoices1;
+            QuesSection[indx].ChoicesNum1 = arr[indx].Choices_Num;*/
+               
+
+            this.panelQuestion.Controls.Add(QuesSection[indx]);
+            Visited.Add(indx);
+            bindSrc = new(QuesSection, "");
 
 
 
@@ -128,51 +132,69 @@ namespace OnlineExamination
             }
         }
 
-            int indx = 0;
+      
+            
+     
         private void btnNext_Click(object sender, EventArgs e)
         {
 
             bindSrc.MoveNext();
-            if (arr[indx].Question_Type1 == "MCQ")
-            {
-                panelMCQ.Visible = true;
-                panelTF.Visible= false;
+            
 
-            }
-            else
-            {
-                panelMCQ.Visible= false;
-                panelTF.Visible= true;
-            }
-           
+
             if (indx < 9)
             {
                 indx++;
+
+
+
+                
+
+                if (!Visited.Contains(indx))
+                {
+                    QuesSection[indx] = new QuestionSection();
+                   
+                    QuesSection[indx] = new QuestionSection(arr[indx].QuestionBody, arr[indx].ContectChoices1, arr[indx].Choices_Num, arr[indx].Question_Type1);
+                    
+                    /*QuesSection[indx].QuestionBody1 = arr[indx].QuestionBody;
+                    QuesSection[indx].TypeQuestion1 = arr[indx].Question_Type1;
+                    QuesSection[indx].ChoicesContent1 = arr[indx].ContectChoices1;
+                    QuesSection[indx].ChoicesNum1 = arr[indx].Choices_Num;
+                    */
+                    Visited.Add(indx);
+
+                }
+
+                this.panelQuestion.Controls.Clear();
+                this.panelQuestion.Controls.Add(QuesSection[indx]);
+
+
+
+
             }
-            
-           
+
+
+
         }
 
         private void ptnPrev_Click(object sender, EventArgs e)
         {
             bindSrc.MovePrevious();
 
-            if (arr[indx].Question_Type1 == "MCQ")
+           if (indx > 0)
             {
-                panelMCQ.Visible = true;
-                panelTF.Visible = false;
-
-            }
-            else
-            {
-                panelMCQ.Visible = false;
-                panelTF.Visible = true;
-            }
-
-            if (indx > 0)
                 indx--;
-            
-          
+                //QuesSection[indx] = new QuestionSection(arr[indx].QuestionBody, arr[indx].ContectChoices1, arr[indx].Choices_Num, arr[indx].Question_Type1);
+               // QuesSection[indx] = new QuestionSection();
+               // QuesSection[indx].QuestionBody1 = arr[indx].QuestionBody;
+               // QuesSection[indx].TypeQuestion1 = arr[indx].Question_Type1;
+               // QuesSection[indx].ChoicesContent1 = arr[indx].ContectChoices1;
+              //  QuesSection[indx].ChoicesNum1 = arr[indx].Choices_Num;
+                this.panelQuestion.Controls.Clear();
+                this.panelQuestion.Controls.Add(QuesSection[indx]);
+
+            }
+
         }
     }
 }

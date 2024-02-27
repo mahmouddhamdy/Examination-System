@@ -16,5 +16,8 @@
     <Compile Update="HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="QuestionSection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
