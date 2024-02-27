@@ -2889,24 +2889,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hassan\\.nuget\\packages\\": {},
-    "D:\\New folder\\Components\\Offline Packages": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\ITI\\Courses\\Adv SQL\\Project (Online Exam)\\WInForm APP\\OnlineExamination\\OnlineExamination.csproj",
+      "projectUniqueName": "E:\\ITI - Mobile Cross Platform\\SQL & C# Project\\Pull\\SQL-Project\\OnlineExamination.csproj",
       "projectName": "OnlineExamination",
-      "projectPath": "F:\\ITI\\Courses\\Adv SQL\\Project (Online Exam)\\WInForm APP\\OnlineExamination\\OnlineExamination.csproj",
-      "packagesPath": "C:\\Users\\hassan\\.nuget\\packages\\",
-      "outputPath": "F:\\ITI\\Courses\\Adv SQL\\Project (Online Exam)\\WInForm APP\\OnlineExamination\\obj\\",
+      "projectPath": "E:\\ITI - Mobile Cross Platform\\SQL & C# Project\\Pull\\SQL-Project\\OnlineExamination.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "E:\\ITI - Mobile Cross Platform\\SQL & C# Project\\Pull\\SQL-Project\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\New folder\\Components\\Offline Packages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\hassan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.2.config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2914,7 +2909,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "D:\\New folder\\Components\\System\\Components\\Packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2961,7 +2955,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

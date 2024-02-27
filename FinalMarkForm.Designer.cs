@@ -31,17 +31,17 @@
             label1 = new Label();
             LabelGrade = new Label();
             btnGoToHome = new Button();
-            grdViewData = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)grdViewData).BeginInit();
+            ModelAnswersgrdView = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)ModelAnswersgrdView).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Corbel", 23.7913036F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(32, 21);
+            label1.Location = new Point(36, 25);
             label1.Name = "label1";
-            label1.Size = new Size(221, 46);
+            label1.Size = new Size(233, 49);
             label1.TabIndex = 0;
             label1.Text = "Your Grade :";
             // 
@@ -49,45 +49,52 @@
             // 
             LabelGrade.AutoSize = true;
             LabelGrade.Font = new Font("Corbel", 23.7913036F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LabelGrade.Location = new Point(294, 21);
+            LabelGrade.Location = new Point(331, 25);
             LabelGrade.Name = "LabelGrade";
-            LabelGrade.Size = new Size(119, 46);
+            LabelGrade.Size = new Size(126, 49);
             LabelGrade.TabIndex = 1;
             LabelGrade.Text = "label2";
             // 
             // btnGoToHome
             // 
-            btnGoToHome.Location = new Point(630, 377);
+            btnGoToHome.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnGoToHome.Location = new Point(1302, 506);
+            btnGoToHome.Margin = new Padding(3, 4, 3, 4);
             btnGoToHome.Name = "btnGoToHome";
-            btnGoToHome.Size = new Size(149, 28);
+            btnGoToHome.Size = new Size(168, 34);
             btnGoToHome.TabIndex = 2;
             btnGoToHome.Text = "Go To My Home";
             btnGoToHome.UseVisualStyleBackColor = true;
             btnGoToHome.Click += btnGoToHome_Click;
             // 
-            // grdViewData
+            // ModelAnswersgrdView
             // 
-            grdViewData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grdViewData.Location = new Point(77, 117);
-            grdViewData.Name = "grdViewData";
-            grdViewData.RowHeadersWidth = 49;
-            grdViewData.Size = new Size(621, 229);
-            grdViewData.TabIndex = 3;
+            ModelAnswersgrdView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ModelAnswersgrdView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ModelAnswersgrdView.Location = new Point(12, 95);
+            ModelAnswersgrdView.Margin = new Padding(3, 4, 3, 4);
+            ModelAnswersgrdView.Name = "ModelAnswersgrdView";
+            ModelAnswersgrdView.RowHeadersWidth = 49;
+            ModelAnswersgrdView.Size = new Size(1458, 388);
+            ModelAnswersgrdView.TabIndex = 3;
             // 
             // FinalMarkForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(791, 450);
-            Controls.Add(grdViewData);
+            ClientSize = new Size(1482, 553);
+            Controls.Add(ModelAnswersgrdView);
             Controls.Add(btnGoToHome);
             Controls.Add(LabelGrade);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FinalMarkForm";
             Text = "FinalMarkForm";
             FormClosing += FinalMarkForm_FormClosing;
             Load += FinalMarkForm_Load;
-            ((System.ComponentModel.ISupportInitialize)grdViewData).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ModelAnswersgrdView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -97,6 +104,6 @@
         private Label label1;
         private Label LabelGrade;
         private Button btnGoToHome;
-        private DataGridView grdViewData;
+        private DataGridView ModelAnswersgrdView;
     }
 }

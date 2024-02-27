@@ -16,16 +16,8 @@ namespace OnlineExamination
     public partial class FinalMarkForm : Form
     {
         public static int CrsId;
-
         ExaminationSystemDBContext context = new ExaminationSystemDBContext();
         Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-
-
-    
-
-
-
-        
         public FinalMarkForm()
         {
             InitializeComponent();
@@ -41,11 +33,17 @@ namespace OnlineExamination
         {
             var studentID = config.AppSettings.Settings["StudentID"].Value;
             var res = context.StudentCourses.Where(c => c.StudentId == int.Parse(studentID) && c.CourseId==CrsId ).FirstOrDefault();
-
             this.LabelGrade.Text = $"{res.StudentGrade.ToString()}%";
 
-           /// var courseData = context.Database.SqlQuery<examData>($"exec ExamQuestions_StudentAnswers_ModelAnswers @examID={}, @studentID={studentID}")  Complete
+            var courseData = context.Database.SqlQuery<examData>($"exec GetStudentAnswerAndModelAnswer {CrsId},{studentID}");
+            this.ModelAnswersgrdView.DataSource = courseData.ToList();
+            
+            // Make the grid view read-only
+            this.ModelAnswersgrdView.ReadOnly = true;
 
+            // column widths
+            this.ModelAnswersgrdView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            this.ModelAnswersgrdView.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.False;
         }
 
         private void btnGoToHome_Click(object sender, EventArgs e)
@@ -54,9 +52,8 @@ namespace OnlineExamination
             this.Hide();
             homeForm.Show();
         }
-        /*
+        
         private record examData(string Question, string StudentAnswer, string ModelAnswer);
-        */
-      
+        
     }
 }
