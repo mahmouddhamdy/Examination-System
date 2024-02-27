@@ -48,8 +48,8 @@ namespace OnlineExamination
 
         private void ExamForm_Load(object sender, EventArgs e)
         {
-            List<QuestionsAndChoices> res = context.Database.SqlQuery<QuestionsAndChoices>($"exec questionsAndChoicesFromExamID 1").ToList();
-            var exam = context.Exams.Where(x => x.ExamId == 1).FirstOrDefault(); //ExamID to be added
+            List<QuestionsAndChoices> res = context.Database.SqlQuery<QuestionsAndChoices>($"exec questionsAndChoicesFromExamID {ExamID}").ToList();
+            var exam = context.Exams.Where(x => x.ExamId == ExamID).FirstOrDefault(); //ExamID to be added
             LoadQuestions(res);
 
             QuesSection[indx] = new QuestionSection();
@@ -64,6 +64,8 @@ namespace OnlineExamination
             StartTimer(int.Parse(exam.ExamDuration));
 
         }
+
+
 
 
         private void LoadQuestions(List<QuestionsAndChoices> res)
@@ -233,14 +235,14 @@ namespace OnlineExamination
             List<string> userAnswerValues = new();
             userAnswerValues = userAnswer.Values.ToList();
             var result = context.Database.ExecuteSql($"""
-                                                      Exam_Answers 1, {studentID},{userAnswerValues[0]},{userAnswerValues[1]},
+                                                      Exam_Answers {ExamID}, {studentID},{userAnswerValues[0]},{userAnswerValues[1]},
                                                       {userAnswerValues[2]},{userAnswerValues[3]},{userAnswerValues[4]},{userAnswerValues[5]},
                                                       {userAnswerValues[6]},{userAnswerValues[7]},{userAnswerValues[8]},{userAnswerValues[9]}
                                                       """);
 
             if (result != 0)
             {
-                var r = context.Database.ExecuteSql($"Exam_Correct 1 , {studentID}");
+                var r = context.Database.ExecuteSql($"Exam_Correct {ExamID} , {studentID}");
                 if (r != 0)
                 {
                     this.Hide();

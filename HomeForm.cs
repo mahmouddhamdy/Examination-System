@@ -46,10 +46,11 @@ namespace OnlineExamination
 
 
         }
-
         private void LoadCourses()
         {
+            FinalMarkForm finalMarkForm = new FinalMarkForm();
             ExamInfoForm examInfo = new();
+            
             var stud = context.Students.FirstOrDefault(s => s.Email == Email_student);
 
             var res = context.StudentCourses.Include(s => s.Course).ThenInclude(c=>c.Ins).Where(s => s.StudentId == stud!.StudentId).ToList();
@@ -64,6 +65,7 @@ namespace OnlineExamination
             {
 
                 string crsName ="";
+                int crsID =-1;
 
                 StringBuilder stringBuilder= new StringBuilder();
                 foreach (var instructor in res[i].Course.Ins)
@@ -80,19 +82,23 @@ namespace OnlineExamination
                 courseSection[i].InsName = instructorNames;
                 courseSection[i].CrsName = res[i].Course.CourseName;
                 crsName = res[i].Course.CourseName;
+                crsID = res[i].Course.CourseId;
+               
+                
 
                 if (res[i].StudentGrade != null)
                 {
                     courseSection[i].StartExamBtn.Visible = false;
                     courseSection[i].Gradevalue.Text = res[i].StudentGrade.ToString();
 
-                   /* courseSection[i].AnswerExamBtn.Click += (sender, e) =>
+                    courseSection[i].AnswerExamBtn.Click += (sender, e) =>
                     {
                         this.Hide();
-                        
+                      //  FinalMarkForm.CrsId = courseSection[i].CrsID;
+                      FinalMarkForm.CrsId = crsID;
                         finalMarkForm.Show();
-                    };*/
-                    
+                    };
+                   
                 }
                 else
                 {
@@ -105,6 +111,7 @@ namespace OnlineExamination
                     {
                         this.Hide();
                         ExamInfoForm.crsName = crsName;
+                        FinalMarkForm.CrsId = crsID;
                         examInfo.Show();
                         
                         

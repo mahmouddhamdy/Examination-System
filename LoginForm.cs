@@ -21,8 +21,7 @@ namespace OnlineExamination
         Student? res;
         private void button1_Click(object sender, EventArgs e)
         {
-
-            HomeForm home = new HomeForm();
+            HomeForm home;
              res = context.Students.FirstOrDefault(s => s.Email == this.EmailTxt.Text);
             if (res != null)
             {
@@ -37,6 +36,7 @@ namespace OnlineExamination
               //  Trace.WriteLine(config.AppSettings.Settings["StudentMail"].Value);
                // Trace.WriteLine(config.AppSettings.Settings["StudentID"].Value);
                 this.Hide();
+                home = new HomeForm();
                 home.Show();
 
             }

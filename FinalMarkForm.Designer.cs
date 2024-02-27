@@ -31,6 +31,8 @@
             label1 = new Label();
             LabelGrade = new Label();
             btnGoToHome = new Button();
+            grdViewData = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)grdViewData).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -63,11 +65,21 @@
             btnGoToHome.UseVisualStyleBackColor = true;
             btnGoToHome.Click += btnGoToHome_Click;
             // 
+            // grdViewData
+            // 
+            grdViewData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            grdViewData.Location = new Point(77, 117);
+            grdViewData.Name = "grdViewData";
+            grdViewData.RowHeadersWidth = 49;
+            grdViewData.Size = new Size(621, 229);
+            grdViewData.TabIndex = 3;
+            // 
             // FinalMarkForm
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(791, 450);
+            Controls.Add(grdViewData);
             Controls.Add(btnGoToHome);
             Controls.Add(LabelGrade);
             Controls.Add(label1);
@@ -75,6 +87,7 @@
             Text = "FinalMarkForm";
             FormClosing += FinalMarkForm_FormClosing;
             Load += FinalMarkForm_Load;
+            ((System.ComponentModel.ISupportInitialize)grdViewData).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -84,5 +97,6 @@
         private Label label1;
         private Label LabelGrade;
         private Button btnGoToHome;
+        private DataGridView grdViewData;
     }
 }
