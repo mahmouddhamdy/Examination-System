@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OnlineExamination.Context;
+using OnlineExamination.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,6 +25,7 @@ namespace OnlineExamination
         Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
         ExaminationSystemDBContext context = new ExaminationSystemDBContext();
         string Email_student;
+        Student? student;
        
     //    FinalMarkForm finalMarkForm = new FinalMarkForm();
         public HomeForm()
@@ -40,8 +42,19 @@ namespace OnlineExamination
         {
 
             Email_student = config.AppSettings.Settings["StudentMail"].Value;
-            LoadCourses();
+            student = context.Students.Include(s=>s.Dept).FirstOrDefault(s => s.Email == Email_student);
 
+            LoadCourses();
+            if (student?.Dept != null)
+            {
+                this.departmentLabel.Text = student.Dept.DepartmentName;
+
+            }
+            else {
+                this.departmentLabel.Visible = false;
+
+            }
+            this.userName.Text = student?.Fname + ' ' + student?.Lname;
 
             this.Text = Email_student;
        
@@ -60,7 +73,6 @@ namespace OnlineExamination
             var res = context.StudentCourses.Include(s => s.Course).ThenInclude(c=>c.Ins).Where(s => s.StudentId == stud!.StudentId).ToList();
 
 
-            //var ins = context.Courses.Include(i=>i.Ins).Select(i => i).ToList();
 
 
             CourseSection[] courseSection = new CourseSection[res.Count];
@@ -97,10 +109,9 @@ namespace OnlineExamination
 
                     courseSection[i].AnswerExamBtn.Click += (sender, e) =>
                     {
-                        this.Hide();
-                      //  FinalMarkForm.CrsId = courseSection[i].CrsID;
+                      this.Hide();
                       FinalMarkForm.CrsId = crsID;
-                        finalMarkForm.Show();
+                      finalMarkForm.Show();
                     };
                    
                 }

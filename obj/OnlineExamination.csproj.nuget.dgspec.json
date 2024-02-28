@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ITI - Mobile Cross Platform\\SQL & C# Project\\Pull\\SQL-Project\\OnlineExamination.csproj": {}
+    "C:\\Users\\Mahmoud\\Documents\\GitHub\\SQL-Project\\OnlineExamination.csproj": {}
   },
   "projects": {
-    "E:\\ITI - Mobile Cross Platform\\SQL & C# Project\\Pull\\SQL-Project\\OnlineExamination.csproj": {
+    "C:\\Users\\Mahmoud\\Documents\\GitHub\\SQL-Project\\OnlineExamination.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ITI - Mobile Cross Platform\\SQL & C# Project\\Pull\\SQL-Project\\OnlineExamination.csproj",
+        "projectUniqueName": "C:\\Users\\Mahmoud\\Documents\\GitHub\\SQL-Project\\OnlineExamination.csproj",
         "projectName": "OnlineExamination",
-        "projectPath": "E:\\ITI - Mobile Cross Platform\\SQL & C# Project\\Pull\\SQL-Project\\OnlineExamination.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "E:\\ITI - Mobile Cross Platform\\SQL & C# Project\\Pull\\SQL-Project\\obj\\",
+        "projectPath": "C:\\Users\\Mahmoud\\Documents\\GitHub\\SQL-Project\\OnlineExamination.csproj",
+        "packagesPath": "C:\\Users\\Mahmoud\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mahmoud\\Documents\\GitHub\\SQL-Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mahmoud\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -68,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

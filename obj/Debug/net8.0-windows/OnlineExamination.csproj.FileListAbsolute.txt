@@ -219,3 +219,4 @@ E:\ITI - Mobile Cross Platform\SQL & C# Project\Pull\SQL-Project\obj\Debug\net8.
 E:\ITI - Mobile Cross Platform\SQL & C# Project\Pull\SQL-Project\obj\Debug\net8.0-windows\OnlineExamination.pdb
 E:\ITI - Mobile Cross Platform\SQL & C# Project\Pull\SQL-Project\obj\Debug\net8.0-windows\OnlineExamination.genruntimeconfig.cache
 E:\ITI - Mobile Cross Platform\SQL & C# Project\Pull\SQL-Project\obj\Debug\net8.0-windows\ref\OnlineExamination.dll
+C:\Users\Mahmoud\Documents\GitHub\SQL-Project\obj\Debug\net8.0-windows\OnlineExamination.FinalMarkForm.resources

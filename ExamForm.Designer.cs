@@ -37,58 +37,66 @@
             // 
             // ptnPrev
             // 
-            ptnPrev.Location = new Point(382, 362);
+            ptnPrev.BackColor = Color.FromArgb(34, 40, 49);
+            ptnPrev.ForeColor = Color.FromArgb(238, 238, 238);
+            ptnPrev.Location = new Point(382, 381);
             ptnPrev.Name = "ptnPrev";
-            ptnPrev.Size = new Size(90, 28);
+            ptnPrev.Size = new Size(90, 29);
             ptnPrev.TabIndex = 1;
             ptnPrev.Text = "prev";
-            ptnPrev.UseVisualStyleBackColor = true;
+            ptnPrev.UseVisualStyleBackColor = false;
             ptnPrev.Click += ptnPrev_Click;
             // 
             // btnNext
             // 
-            btnNext.Location = new Point(690, 362);
+            btnNext.BackColor = Color.FromArgb(34, 40, 49);
+            btnNext.ForeColor = Color.FromArgb(238, 238, 238);
+            btnNext.Location = new Point(690, 381);
             btnNext.Name = "btnNext";
-            btnNext.Size = new Size(90, 28);
+            btnNext.Size = new Size(90, 29);
             btnNext.TabIndex = 2;
             btnNext.Text = "next";
-            btnNext.UseVisualStyleBackColor = true;
+            btnNext.UseVisualStyleBackColor = false;
             btnNext.Click += btnNext_Click;
             // 
             // panelQuestion
             // 
-            panelQuestion.Location = new Point(21, 26);
+            panelQuestion.Location = new Point(21, 27);
             panelQuestion.Name = "panelQuestion";
-            panelQuestion.Size = new Size(1315, 289);
+            panelQuestion.Size = new Size(1315, 304);
             panelQuestion.TabIndex = 3;
             // 
             // finishExamButton
             // 
-            finishExamButton.Location = new Point(962, 362);
+            finishExamButton.BackColor = Color.FromArgb(34, 40, 49);
+            finishExamButton.ForeColor = Color.FromArgb(238, 238, 238);
+            finishExamButton.Location = new Point(962, 381);
             finishExamButton.Name = "finishExamButton";
-            finishExamButton.Size = new Size(94, 28);
+            finishExamButton.Size = new Size(94, 29);
             finishExamButton.TabIndex = 4;
             finishExamButton.Text = "Finish Exam";
-            finishExamButton.UseVisualStyleBackColor = true;
+            finishExamButton.UseVisualStyleBackColor = false;
             finishExamButton.Visible = false;
             finishExamButton.Click += finishExamButton_Click;
             // 
             // lblTimer
             // 
             lblTimer.AutoSize = true;
+            lblTimer.BackColor = Color.FromArgb(0, 173, 181);
             lblTimer.Font = new Font("Corbel", 18.1565228F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTimer.Location = new Point(1342, 26);
+            lblTimer.ForeColor = Color.FromArgb(34, 40, 49);
+            lblTimer.Location = new Point(1364, 27);
             lblTimer.Name = "lblTimer";
-            lblTimer.Size = new Size(89, 36);
+            lblTimer.Size = new Size(97, 38);
             lblTimer.TabIndex = 5;
             lblTimer.Text = "label1";
             // 
             // ExamForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.SteelBlue;
-            ClientSize = new Size(1488, 473);
+            BackColor = Color.FromArgb(238, 238, 238);
+            ClientSize = new Size(1473, 493);
             Controls.Add(lblTimer);
             Controls.Add(finishExamButton);
             Controls.Add(panelQuestion);

@@ -122,18 +122,7 @@ namespace OnlineExamination
         {
 
             bindSrc.MoveNext();
-            bool indexExists = userAnswer.ContainsKey(indx);
-
-            string selectedTag = getUserAnswer();
-
-            if (indexExists)
-            {
-                userAnswer[indx] = selectedTag;
-            }
-            else
-            {
-                userAnswer.Add(indx, selectedTag);
-            }
+            checkForUserAnswer();
 
 
             if (indx < 9)
@@ -218,22 +207,33 @@ namespace OnlineExamination
 
         private void finishExamButton_Click(object sender, EventArgs e)
         {
-            FinalMarkForm finalMarkForm = new FinalMarkForm();
-            bool indexExists = userAnswer.ContainsKey(indx);
+            checkForUserAnswer();
 
-            string selectedTag = getUserAnswer();
-            if (indexExists)
-            {
-                userAnswer[indx] = selectedTag;
-            }
-            else
-            {
-                userAnswer.Add(indx, selectedTag);
-            }
+            finalizeUserAnswers();
+
+        }
+
+        private void finalizeUserAnswers()
+        {
+            FinalMarkForm finalMarkForm = new FinalMarkForm();
 
             var studentID = config.AppSettings.Settings["StudentID"].Value;
-            List<string> userAnswerValues = new();
-            userAnswerValues = userAnswer.Values.ToList();
+            string[] userAnswerValues = new string[10];
+            string[] temp = new string[10];
+
+            for (int i = 0; i < userAnswerValues.Length; i++)
+            {
+                userAnswerValues[i] = "";
+            }
+            temp = userAnswer.Values.ToArray<string>();
+            for (int i = 0; i < temp.Length; i++)
+            {
+
+                userAnswerValues[i] = temp[i];
+
+
+            }
+
             var result = context.Database.ExecuteSql($"""
                                                       Exam_Answers {ExamID}, {studentID},{userAnswerValues[0]},{userAnswerValues[1]},
                                                       {userAnswerValues[2]},{userAnswerValues[3]},{userAnswerValues[4]},{userAnswerValues[5]},
@@ -249,10 +249,22 @@ namespace OnlineExamination
                     finalMarkForm.Show();
                 }
             }
-
         }
 
+        private void checkForUserAnswer()
+        {
+            bool indexExists = userAnswer.ContainsKey(indx);
 
+            string selectedTag = getUserAnswer();
+            if (indexExists)
+            {
+                userAnswer[indx] = selectedTag;
+            }
+            else
+            {
+                userAnswer.Add(indx, selectedTag);
+            }
+        }
 
         private void StartTimer(int totalTimeInMinutes)
         {
@@ -268,7 +280,8 @@ namespace OnlineExamination
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            remainingTime--; // Decrease the remaining time by 1 second
+            remainingTime--; 
+
             if (remainingTime <= 0)
             {
                 examTimer.Stop(); // Stop the timer if the time is up
@@ -280,7 +293,8 @@ namespace OnlineExamination
 
         private void PerformEndActions()
         {
-
+            checkForUserAnswer();
+            finalizeUserAnswers();
         }
 
 
