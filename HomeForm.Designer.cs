@@ -32,10 +32,10 @@
             panel1 = new Panel();
             panel2 = new Panel();
             informationPanel = new Panel();
+            label2 = new Label();
+            departmentLabel = new Label();
             pictureBox1 = new PictureBox();
             userName = new Label();
-            departmentLabel = new Label();
-            label2 = new Label();
             informationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -45,9 +45,9 @@
             flowLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.BackColor = Color.LightBlue;
-            flowLayoutPanel1.Location = new Point(205, 123);
+            flowLayoutPanel1.Location = new Point(205, 117);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1224, 686);
+            flowLayoutPanel1.Size = new Size(1201, 652);
             flowLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -56,7 +56,7 @@
             panel1.ForeColor = SystemColors.ActiveCaption;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(201, 748);
+            panel1.Size = new Size(201, 711);
             panel1.TabIndex = 0;
             // 
             // panel2
@@ -66,7 +66,7 @@
             panel2.ForeColor = SystemColors.ActiveCaption;
             panel2.Location = new Point(3, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(201, 827);
+            panel2.Size = new Size(201, 786);
             panel2.TabIndex = 1;
             // 
             // informationPanel
@@ -78,15 +78,34 @@
             informationPanel.Controls.Add(userName);
             informationPanel.Location = new Point(205, -7);
             informationPanel.Name = "informationPanel";
-            informationPanel.Size = new Size(1201, 141);
+            informationPanel.Size = new Size(1201, 134);
             informationPanel.TabIndex = 2;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F);
+            label2.Location = new Point(873, 54);
+            label2.Name = "label2";
+            label2.Size = new Size(121, 28);
+            label2.TabIndex = 4;
+            label2.Text = "Department:";
+            // 
+            // departmentLabel
+            // 
+            departmentLabel.Font = new Font("Segoe UI", 12F);
+            departmentLabel.Location = new Point(1000, 54);
+            departmentLabel.Name = "departmentLabel";
+            departmentLabel.Size = new Size(237, 24);
+            departmentLabel.TabIndex = 3;
+            departmentLabel.Text = "label1";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.ProfilePicture;
             pictureBox1.Location = new Point(0, 7);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(121, 117);
+            pictureBox1.Size = new Size(121, 111);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -94,43 +113,24 @@
             // userName
             // 
             userName.Font = new Font("Corbel", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            userName.Location = new Point(123, 54);
+            userName.Location = new Point(127, 25);
             userName.Name = "userName";
-            userName.Size = new Size(740, 32);
+            userName.Size = new Size(740, 79);
             userName.TabIndex = 1;
             userName.Text = "label2";
             userName.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // departmentLabel
-            // 
-            departmentLabel.Font = new Font("Segoe UI", 12F);
-            departmentLabel.Location = new Point(1000, 61);
-            departmentLabel.Name = "departmentLabel";
-            departmentLabel.Size = new Size(237, 25);
-            departmentLabel.TabIndex = 3;
-            departmentLabel.Text = "label1";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(873, 61);
-            label2.Name = "label2";
-            label2.Size = new Size(121, 28);
-            label2.TabIndex = 4;
-            label2.Text = "Department:";
-            // 
             // HomeForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1407, 820);
+            ClientSize = new Size(1407, 781);
             Controls.Add(informationPanel);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(flowLayoutPanel1);
-            MaximumSize = new Size(1425, 867);
-            MinimumSize = new Size(1425, 867);
+            MaximumSize = new Size(1425, 826);
+            MinimumSize = new Size(1425, 826);
             Name = "HomeForm";
             Text = "Form2";
             FormClosing += HomeForm_FormClosing;

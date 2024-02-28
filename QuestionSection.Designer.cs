@@ -55,7 +55,7 @@
             panel1.Controls.Add(RadioMCQ4);
             panel1.Location = new Point(30, 168);
             panel1.Name = "panel1";
-            panel1.Size = new Size(240, 126);
+            panel1.Size = new Size(800, 400);
             panel1.TabIndex = 1;
             // 
             // radioMCQ1
@@ -63,7 +63,7 @@
             RadioMCQ1.AutoSize = true;
             RadioMCQ1.Location = new Point(17, 3);
             RadioMCQ1.Name = "radioMCQ1";
-            RadioMCQ1.Size = new Size(117, 24);
+            RadioMCQ1.Size = new Size(214, 124);
             RadioMCQ1.TabIndex = 2;
             RadioMCQ1.TabStop = true;
             RadioMCQ1.Text = "radioButton1";
@@ -74,7 +74,7 @@
             RadioMCQ2.AutoSize = true;
             RadioMCQ2.Location = new Point(17, 35);
             RadioMCQ2.Name = "radioMCQ2";
-            RadioMCQ2.Size = new Size(117, 24);
+            RadioMCQ2.Size = new Size(214, 124);
             RadioMCQ2.TabIndex = 3;
             RadioMCQ2.TabStop = true;
             RadioMCQ2.Text = "radioButton2";
@@ -85,7 +85,7 @@
             RadioMCQ3.AutoSize = true;
             RadioMCQ3.Location = new Point(16, 66);
             RadioMCQ3.Name = "radioMCQ3";
-            RadioMCQ3.Size = new Size(117, 24);
+            RadioMCQ3.Size = new Size(214, 124);
             RadioMCQ3.TabIndex = 4;
             RadioMCQ3.TabStop = true;
             RadioMCQ3.Text = "radioButton3";
@@ -96,7 +96,7 @@
             RadioMCQ4.AutoSize = true;
             RadioMCQ4.Location = new Point(16, 98);
             RadioMCQ4.Name = "radioMCQ4";
-            RadioMCQ4.Size = new Size(117, 24);
+            RadioMCQ4.Size = new Size(214, 124);
             RadioMCQ4.TabIndex = 5;
             RadioMCQ4.TabStop = true;
             RadioMCQ4.Text = "radioButton4";

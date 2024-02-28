@@ -32,10 +32,15 @@ namespace OnlineExamination
         private void FinalMarkForm_Load(object sender, EventArgs e)
         {
             var studentID = config.AppSettings.Settings["StudentID"].Value;
+            var ExamID = context.Database.SqlQuery<int>($"exec getExamFromCrsID {CrsId},{studentID}").ToList().FirstOrDefault();
+            
+
+
+
             var res = context.StudentCourses.Where(c => c.StudentId == int.Parse(studentID) && c.CourseId==CrsId ).FirstOrDefault();
             this.LabelGrade.Text = $"{res.StudentGrade.ToString()}%";
 
-            var courseData = context.Database.SqlQuery<examData>($"exec GetStudentAnswerAndModelAnswer {CrsId},{studentID}");
+            var courseData = context.Database.SqlQuery<examData>($"exec ExamQuestions_StudentAnswers_ModelAnswers {ExamID},{studentID}");
             this.ModelAnswersgrdView.DataSource = courseData.ToList();
             
             // Make the grid view read-only

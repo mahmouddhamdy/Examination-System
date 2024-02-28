@@ -39,9 +39,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Corbel", 23.7913036F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(36, 25);
+            label1.Location = new Point(32, 21);
             label1.Name = "label1";
-            label1.Size = new Size(233, 49);
+            label1.Size = new Size(221, 46);
             label1.TabIndex = 0;
             label1.Text = "Your Grade :";
             // 
@@ -49,19 +49,18 @@
             // 
             LabelGrade.AutoSize = true;
             LabelGrade.Font = new Font("Corbel", 23.7913036F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LabelGrade.Location = new Point(331, 25);
+            LabelGrade.Location = new Point(294, 21);
             LabelGrade.Name = "LabelGrade";
-            LabelGrade.Size = new Size(126, 49);
+            LabelGrade.Size = new Size(119, 46);
             LabelGrade.TabIndex = 1;
             LabelGrade.Text = "label2";
             // 
             // btnGoToHome
             // 
             btnGoToHome.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnGoToHome.Location = new Point(1302, 506);
-            btnGoToHome.Margin = new Padding(3, 4, 3, 4);
+            btnGoToHome.Location = new Point(1246, 695);
             btnGoToHome.Name = "btnGoToHome";
-            btnGoToHome.Size = new Size(168, 34);
+            btnGoToHome.Size = new Size(149, 28);
             btnGoToHome.TabIndex = 2;
             btnGoToHome.Text = "Go To My Home";
             btnGoToHome.UseVisualStyleBackColor = true;
@@ -69,27 +68,28 @@
             // 
             // ModelAnswersgrdView
             // 
-            ModelAnswersgrdView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ModelAnswersgrdView.BackgroundColor = Color.White;
             ModelAnswersgrdView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ModelAnswersgrdView.Location = new Point(12, 95);
-            ModelAnswersgrdView.Margin = new Padding(3, 4, 3, 4);
+            ModelAnswersgrdView.GridColor = Color.Black;
+            ModelAnswersgrdView.Location = new Point(2, 70);
             ModelAnswersgrdView.Name = "ModelAnswersgrdView";
             ModelAnswersgrdView.RowHeadersWidth = 49;
-            ModelAnswersgrdView.Size = new Size(1458, 388);
+            ModelAnswersgrdView.Size = new Size(1401, 699);
             ModelAnswersgrdView.TabIndex = 3;
             // 
             // FinalMarkForm
             // 
-            AutoScaleDimensions = new SizeF(9F, 23F);
+            AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1482, 553);
-            Controls.Add(ModelAnswersgrdView);
+            ClientSize = new Size(1407, 781);
             Controls.Add(btnGoToHome);
             Controls.Add(LabelGrade);
             Controls.Add(label1);
-            Margin = new Padding(3, 4, 3, 4);
+            Controls.Add(ModelAnswersgrdView);
             MaximizeBox = false;
+            MaximumSize = new Size(1425, 826);
             MinimizeBox = false;
+            MinimumSize = new Size(1425, 826);
             Name = "FinalMarkForm";
             Text = "FinalMarkForm";
             FormClosing += FinalMarkForm_FormClosing;

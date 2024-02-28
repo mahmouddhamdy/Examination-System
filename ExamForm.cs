@@ -31,8 +31,8 @@ namespace OnlineExamination
         BindingSource bindSrc;
         private System.Windows.Forms.Timer examTimer = new();
         private int remainingTime;
-    
 
+        bool flagClicked = false;
         public ExamForm()
         {
             InitializeComponent();
@@ -157,7 +157,7 @@ namespace OnlineExamination
 
         private string getUserAnswer()
         {
-            string selectedTag = "";
+            string selectedTag = " ";
 
             if (QuesSection[indx].RadioMCQ1.Checked == true)
             {
@@ -182,6 +182,7 @@ namespace OnlineExamination
 
 
             }
+
 
             return selectedTag;
         }
@@ -210,6 +211,7 @@ namespace OnlineExamination
             checkForUserAnswer();
 
             finalizeUserAnswers();
+            flagClicked=true;
 
         }
 
@@ -223,29 +225,33 @@ namespace OnlineExamination
 
             for (int i = 0; i < userAnswerValues.Length; i++)
             {
-                userAnswerValues[i] = "";
+                userAnswerValues[i] = " ";
             }
+
             temp = userAnswer.Values.ToArray<string>();
             for (int i = 0; i < temp.Length; i++)
             {
 
+                
                 userAnswerValues[i] = temp[i];
 
 
             }
 
+            Trace.WriteLine("test1");
             var result = context.Database.ExecuteSql($"""
                                                       Exam_Answers {ExamID}, {studentID},{userAnswerValues[0]},{userAnswerValues[1]},
                                                       {userAnswerValues[2]},{userAnswerValues[3]},{userAnswerValues[4]},{userAnswerValues[5]},
                                                       {userAnswerValues[6]},{userAnswerValues[7]},{userAnswerValues[8]},{userAnswerValues[9]}
                                                       """);
-
+            Trace.WriteLine("test2");
             if (result != 0)
             {
                 var r = context.Database.ExecuteSql($"Exam_Correct {ExamID} , {studentID}");
                 if (r != 0)
                 {
-                    this.Hide();
+                     this.Hide();
+                    //this.Close();
                     finalMarkForm.Show();
                 }
             }
@@ -293,8 +299,12 @@ namespace OnlineExamination
 
         private void PerformEndActions()
         {
-            checkForUserAnswer();
-            finalizeUserAnswers();
+            if (flagClicked == false)
+            {
+                checkForUserAnswer();
+                finalizeUserAnswers();
+            }
+           
         }
 
 

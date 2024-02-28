@@ -79,11 +79,13 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1407, 781);
             Controls.Add(StartExambtn);
             Controls.Add(labelDuration);
             Controls.Add(NoQuestionlabel);
             Controls.Add(LabelCrsName);
+            MaximumSize = new Size(1425, 826);
+            MinimumSize = new Size(1425, 826);
             Name = "ExamInfoForm";
             Text = "ExamInfoForm";
             FormClosing += ExamInfoForm_FormClosing;
