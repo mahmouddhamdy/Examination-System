@@ -55,7 +55,7 @@
             panel1.Controls.Add(RadioMCQ4);
             panel1.Location = new Point(30, 168);
             panel1.Name = "panel1";
-            panel1.Size = new Size(240, 126);
+            panel1.Size = new Size(600, 300);
             panel1.TabIndex = 1;
             // 
             // radioMCQ1

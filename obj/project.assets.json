@@ -2894,11 +2894,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mahmoud\\Documents\\GitHub\\SQL-Project\\OnlineExamination.csproj",
+      "projectUniqueName": "C:\\Users\\Mahmoud\\Desktop\\DBProject\\OnlineExamination.csproj",
       "projectName": "OnlineExamination",
-      "projectPath": "C:\\Users\\Mahmoud\\Documents\\GitHub\\SQL-Project\\OnlineExamination.csproj",
+      "projectPath": "C:\\Users\\Mahmoud\\Desktop\\DBProject\\OnlineExamination.csproj",
       "packagesPath": "C:\\Users\\Mahmoud\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mahmoud\\Documents\\GitHub\\SQL-Project\\obj\\",
+      "outputPath": "C:\\Users\\Mahmoud\\Desktop\\DBProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mahmoud\\AppData\\Roaming\\NuGet\\NuGet.Config",
