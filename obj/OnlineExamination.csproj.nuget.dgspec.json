@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\ITI\\Courses\\Adv SQL\\Project (Online Exam)\\WInForm APP\\OnlineExamination\\OnlineExamination.csproj": {}
+    "F:\\ITI\\Courses\\Adv SQL\\Project (Online Exam)\\OnlineExamination APP\\OnlineExamination.csproj": {}
   },
   "projects": {
-    "F:\\ITI\\Courses\\Adv SQL\\Project (Online Exam)\\WInForm APP\\OnlineExamination\\OnlineExamination.csproj": {
+    "F:\\ITI\\Courses\\Adv SQL\\Project (Online Exam)\\OnlineExamination APP\\OnlineExamination.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\ITI\\Courses\\Adv SQL\\Project (Online Exam)\\WInForm APP\\OnlineExamination\\OnlineExamination.csproj",
+        "projectUniqueName": "F:\\ITI\\Courses\\Adv SQL\\Project (Online Exam)\\OnlineExamination APP\\OnlineExamination.csproj",
         "projectName": "OnlineExamination",
-        "projectPath": "F:\\ITI\\Courses\\Adv SQL\\Project (Online Exam)\\WInForm APP\\OnlineExamination\\OnlineExamination.csproj",
+        "projectPath": "F:\\ITI\\Courses\\Adv SQL\\Project (Online Exam)\\OnlineExamination APP\\OnlineExamination.csproj",
         "packagesPath": "C:\\Users\\hassan\\.nuget\\packages\\",
-        "outputPath": "F:\\ITI\\Courses\\Adv SQL\\Project (Online Exam)\\WInForm APP\\OnlineExamination\\obj\\",
+        "outputPath": "F:\\ITI\\Courses\\Adv SQL\\Project (Online Exam)\\OnlineExamination APP\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\New folder\\Components\\Offline Packages"

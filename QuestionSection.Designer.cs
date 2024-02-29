@@ -40,6 +40,7 @@
             // labelQuestion
             // 
             labelQuestion.Font = new Font("Corbel", 21.913044F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelQuestion.ForeColor = Color.FromArgb(238, 238, 238);
             labelQuestion.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Assertive;
             labelQuestion.Location = new Point(30, 22);
             labelQuestion.Name = "labelQuestion";
@@ -49,6 +50,7 @@
             // 
             // panel1
             // 
+            panel1.ForeColor = Color.FromArgb(238, 238, 238);
             panel1.Controls.Add(RadioMCQ1);
             panel1.Controls.Add(RadioMCQ2);
             panel1.Controls.Add(RadioMCQ3);

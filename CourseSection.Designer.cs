@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CourseSection));
             CrsNamelbl = new Label();
             InsNameLBl = new Label();
             GradeValue = new Label();
@@ -44,8 +45,8 @@
             // 
             CrsNamelbl.AutoSize = true;
             CrsNamelbl.Font = new Font("Arial", 13.7739134F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            CrsNamelbl.ForeColor = SystemColors.ControlLightLight;
-            CrsNamelbl.Location = new Point(551, 38);
+            CrsNamelbl.ForeColor = Color.FromArgb(57, 62, 70);
+            CrsNamelbl.Location = new Point(455, 38);
             CrsNamelbl.Name = "CrsNamelbl";
             CrsNamelbl.Size = new Size(119, 26);
             CrsNamelbl.TabIndex = 0;
@@ -55,8 +56,8 @@
             // 
             InsNameLBl.AutoSize = true;
             InsNameLBl.Font = new Font("Arial", 13.7739134F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            InsNameLBl.ForeColor = Color.White;
-            InsNameLBl.Location = new Point(551, 109);
+            InsNameLBl.ForeColor = Color.FromArgb(57, 62, 70);
+            InsNameLBl.Location = new Point(473, 113);
             InsNameLBl.Name = "InsNameLBl";
             InsNameLBl.Size = new Size(101, 26);
             InsNameLBl.TabIndex = 1;
@@ -67,8 +68,8 @@
             GradeValue.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             GradeValue.AutoSize = true;
             GradeValue.Font = new Font("Arial", 13.7739134F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            GradeValue.ForeColor = SystemColors.ControlLight;
-            GradeValue.Location = new Point(938, 42);
+            GradeValue.ForeColor = Color.FromArgb(57, 62, 70);
+            GradeValue.Location = new Point(892, 38);
             GradeValue.Name = "GradeValue";
             GradeValue.Size = new Size(74, 26);
             GradeValue.TabIndex = 2;
@@ -77,10 +78,12 @@
             // btnExam
             // 
             btnExam.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnExam.BackColor = Color.White;
+            btnExam.BackColor = Color.FromArgb(57, 62, 70);
+            btnExam.FlatAppearance.BorderColor = Color.FromArgb(57, 62, 70);
+            btnExam.FlatStyle = FlatStyle.Flat;
             btnExam.Font = new Font("Arial", 13.7739134F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnExam.ForeColor = Color.DarkOrange;
-            btnExam.Location = new Point(822, 101);
+            btnExam.ForeColor = Color.FromArgb(0, 173, 181);
+            btnExam.Location = new Point(795, 101);
             btnExam.Name = "btnExam";
             btnExam.Size = new Size(190, 37);
             btnExam.TabIndex = 3;
@@ -89,7 +92,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.Screenshot_2024_02_25_;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(253, 176);
@@ -101,8 +104,8 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 16.2782612F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(310, 35);
+            label1.ForeColor = Color.FromArgb(34, 40, 49);
+            label1.Location = new Point(259, 35);
             label1.Name = "label1";
             label1.Size = new Size(190, 30);
             label1.TabIndex = 5;
@@ -112,8 +115,8 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 16.2782612F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(310, 105);
+            label2.ForeColor = Color.FromArgb(34, 40, 49);
+            label2.Location = new Point(259, 109);
             label2.Name = "label2";
             label2.Size = new Size(221, 30);
             label2.TabIndex = 6;
@@ -123,8 +126,8 @@
             // 
             GradeLabel.AutoSize = true;
             GradeLabel.Font = new Font("Arial", 16.2782612F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            GradeLabel.ForeColor = Color.White;
-            GradeLabel.Location = new Point(751, 38);
+            GradeLabel.ForeColor = Color.FromArgb(34, 40, 49);
+            GradeLabel.Location = new Point(724, 34);
             GradeLabel.Name = "GradeLabel";
             GradeLabel.Size = new Size(162, 30);
             GradeLabel.TabIndex = 7;
@@ -133,10 +136,12 @@
             // btnAnswer
             // 
             btnAnswer.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnAnswer.BackColor = Color.White;
+            btnAnswer.BackColor = Color.FromArgb(57, 62, 70);
+            btnAnswer.FlatAppearance.BorderColor = Color.FromArgb(57, 62, 70);
+            btnAnswer.FlatStyle = FlatStyle.Flat;
             btnAnswer.Font = new Font("Arial", 13.7739134F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAnswer.ForeColor = Color.DarkOrange;
-            btnAnswer.Location = new Point(812, 101);
+            btnAnswer.ForeColor = Color.FromArgb(238, 238, 238);
+            btnAnswer.Location = new Point(795, 102);
             btnAnswer.Name = "btnAnswer";
             btnAnswer.Size = new Size(190, 37);
             btnAnswer.TabIndex = 8;
@@ -147,7 +152,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.SteelBlue;
+            BackColor = Color.FromArgb(0, 173, 181);
             Controls.Add(btnAnswer);
             Controls.Add(GradeLabel);
             Controls.Add(label2);
@@ -158,7 +163,7 @@
             Controls.Add(InsNameLBl);
             Controls.Add(CrsNamelbl);
             Name = "CourseSection";
-            Size = new Size(1151, 176);
+            Size = new Size(1029, 176);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

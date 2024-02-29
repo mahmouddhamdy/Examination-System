@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mhRNdgPCouCET1QiiY2cZjMxd97BcOtyRbI2YUfsCt1/aMcNHBDzqn31TSjIgJYBvUjMVavuZeaedM0feEK1AA==",
+  "dgSpecHash": "D4ADkRhAM6C2UAsGiXQBB4bhpHDg6Hn3acPxIZDW67nzVcg3vg7RiCQbKkjexmkGgEw9oKCc3NbuoOH9kAmavw==",
   "success": true,
-  "projectFilePath": "F:\\ITI\\Courses\\Adv SQL\\Project (Online Exam)\\WInForm APP\\OnlineExamination\\OnlineExamination.csproj",
+  "projectFilePath": "F:\\ITI\\Courses\\Adv SQL\\Project (Online Exam)\\OnlineExamination APP\\OnlineExamination.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hassan\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\hassan\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
@@ -63,12 +63,5 @@
     "C:\\Users\\hassan\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\hassan\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file F:\\ITI\\Courses\\Adv SQL\\Project (Online Exam)\\WInForm APP\\OnlineExamination\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

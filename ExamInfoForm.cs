@@ -45,9 +45,9 @@ namespace OnlineExamination
                 {
                     var resExam = context.Exams.OrderBy(e => e.ExamId).Last();
 
-                    this.LabelCrsName.Text = crsName;
-                    this.NoQuestionlabel.Text = $"10 MCQ = {noMCQ} and T/F = {noTF}";
-                    this.labelDuration.Text = resExam.ExamDuration.ToString();
+                    this.LabelCrsName.Text = $"{crsName} Exam";
+                    this.NoQuestionlabel.Text = $"Questions: 10 ( MCQ: {noMCQ} , T/F: {noTF} )";
+                    this.labelDuration.Text = $"Duration: {resExam.ExamDuration.ToString()} Minutes";
 
                     ExamForm.ExamID = resExam.ExamId;
                 }

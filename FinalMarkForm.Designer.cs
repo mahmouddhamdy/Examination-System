@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             label1 = new Label();
             LabelGrade = new Label();
             btnGoToHome = new Button();
@@ -39,6 +40,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Corbel", 23.7913036F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(0, 173, 181);
             label1.Location = new Point(32, 21);
             label1.Name = "label1";
             label1.Size = new Size(221, 46);
@@ -49,6 +51,7 @@
             // 
             LabelGrade.AutoSize = true;
             LabelGrade.Font = new Font("Corbel", 23.7913036F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LabelGrade.ForeColor = Color.FromArgb(0, 173, 181);
             LabelGrade.Location = new Point(294, 21);
             LabelGrade.Name = "LabelGrade";
             LabelGrade.Size = new Size(119, 46);
@@ -58,19 +61,29 @@
             // btnGoToHome
             // 
             btnGoToHome.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnGoToHome.Location = new Point(1246, 695);
+            btnGoToHome.Font = new Font("Segoe UI", 16.2782612F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnGoToHome.ForeColor = Color.FromArgb(0, 173, 181);
+            btnGoToHome.Location = new Point(1176, 678);
             btnGoToHome.Name = "btnGoToHome";
-            btnGoToHome.Size = new Size(149, 28);
+            btnGoToHome.Size = new Size(178, 59);
             btnGoToHome.TabIndex = 2;
-            btnGoToHome.Text = "Go To My Home";
+            btnGoToHome.Text = "Go To Home";
             btnGoToHome.UseVisualStyleBackColor = true;
             btnGoToHome.Click += btnGoToHome_Click;
             // 
             // ModelAnswersgrdView
             // 
-            ModelAnswersgrdView.BackgroundColor = Color.White;
+            ModelAnswersgrdView.BackgroundColor = Color.FromArgb(57, 62, 70);
             ModelAnswersgrdView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ModelAnswersgrdView.GridColor = Color.Black;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(57, 62, 70);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 8.765218F);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(238, 238, 238);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 173, 181);
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(57, 62, 70);
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            ModelAnswersgrdView.DefaultCellStyle = dataGridViewCellStyle1;
+            ModelAnswersgrdView.GridColor = Color.FromArgb(57, 62, 70);
             ModelAnswersgrdView.Location = new Point(2, 70);
             ModelAnswersgrdView.Name = "ModelAnswersgrdView";
             ModelAnswersgrdView.RowHeadersWidth = 49;
@@ -81,6 +94,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(34, 40, 49);
             ClientSize = new Size(1407, 781);
             Controls.Add(btnGoToHome);
             Controls.Add(LabelGrade);
