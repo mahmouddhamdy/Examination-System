@@ -105,6 +105,7 @@
             MinimizeBox = false;
             MinimumSize = new Size(1425, 826);
             Name = "FinalMarkForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FinalMarkForm";
             FormClosing += FinalMarkForm_FormClosing;
             Load += FinalMarkForm_Load;
