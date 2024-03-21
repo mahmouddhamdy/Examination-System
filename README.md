@@ -6,4 +6,4 @@ A basic examination system with features such as choosing the right topic before
 1- Entity Framework (EF) for C#
 
 
-2- SQL Server
+2- SQL Server DBMS
